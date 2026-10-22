@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aemielvin C. Loremia — Full-Stack Engineer</title>
+    <meta name="description" content="Full-stack engineer with 9 years building production web applications in TypeScript, React/Next.js and Node.js on PostgreSQL and AWS." />
+    <meta name="author" content="Aemielvin C. Loremia" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="canonical" href="https://erocrizs.github.io/resume/" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f4e79'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EAL%3C/text%3E%3C/svg%3E" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Aemielvin C. Loremia — Full-Stack Engineer" />
+    <meta property="og:description" content="Full-stack engineer with 9 years building production web applications in TypeScript, React/Next.js and Node.js on PostgreSQL and AWS." />
+    <meta property="og:url" content="https://erocrizs.github.io/resume/" />
+    <meta name="twitter:card" content="summary" />
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Aemielvin C. Loremia","jobTitle":"Full-Stack Engineer","description":"Full-stack engineer with 9 years building production web applications in TypeScript, React/Next.js and Node.js on PostgreSQL and AWS. Most recently built LLM-powered data pipelines and AI-assisted internal tools in production, and work day to day with AI development tools and agentic workflows. Previously shipped payment and fintech systems (instant creator payouts, digital-bank transfer APIs) and SaaS booking and analytics platforms. Introduced CI/CD and test-driven development to past teams and led a small international contractor team. Experienced working remotely with US, EU and APAC teams in agile settings.","url":"https://erocrizs.github.io/resume/","email":"mailto:aemielvin.loremia@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Quezon City, Philippines"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Ateneo de Manila University"},"sameAs":["https://linkedin.com/in/aemielvin-loremia-41717a140","https://github.com/erocrizs"]}</script>
+    <style>
+:root {
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --text: #1c1f24;
+  --muted: #5b6370;
+  --rule: #dfe2e7;
+  --accent: #1f4e79;
+  --accent-soft: #e8eff6;
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius: 10px;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1216;
+    --surface: #171b21;
+    --text: #e6e8eb;
+    --muted: #9aa3ae;
+    --rule: #2a3039;
+    --accent: #8cb8e6;
+    --accent-soft: #1d2a38;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 1rem/1.65 var(--font);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Toolbar ---------- */
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  max-width: 54rem;
+  margin: 2rem auto 1rem;
+  padding: 0 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--surface);
+  font: 600 0.875rem/1.2 var(--font);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ---------- Page ---------- */
+
+.page {
+  max-width: 54rem;
+  margin: 0 auto;
+  padding: 3.5rem 4rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.masthead {
+  padding-bottom: 1.75rem;
+  border-bottom: 3px solid var(--accent);
+}
+
+.masthead h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.headline {
+  margin: 0.6rem 0 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contact li:not(:last-child)::after {
+  content: "·";
+  margin: 0 0.55rem;
+  color: var(--rule);
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  margin-top: 2.75rem;
+}
+
+.section > h2 {
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section p {
+  margin: 0 0 0.75rem;
+}
+
+.section ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.section li + li {
+  margin-top: 0.55rem;
+}
+
+.section--technical-skills > ul {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.section--technical-skills > ul > li {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 1rem;
+}
+
+.section--technical-skills li + li {
+  margin-top: 0;
+}
+
+/* ---------- Roles ---------- */
+
+.role {
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.role:first-of-type {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.role__header,
+.engagement__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.3rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.header__main {
+  min-width: 0;
+}
+
+.header__main .meta {
+  margin-top: 0.2rem;
+}
+
+.dates {
+  flex-shrink: 0;
+  margin: 0;
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.role__heading {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.role__title {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.meta span:not(:last-child)::after {
+  content: "·";
+  margin: 0 0.45rem;
+  color: var(--rule);
+}
+
+.engagement {
+  margin: 1.25rem 0 0;
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--accent-soft);
+}
+
+.engagement + .engagement {
+  margin-top: 2rem;
+}
+
+.engagement__header {
+  margin-bottom: 0.6rem;
+}
+
+.engagement__name {
+  margin: 0;
+  font-size: 0.975rem;
+}
+
+/* ---------- Stack tags ---------- */
+
+li.stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+  margin-left: -1.15rem;
+  list-style: none;
+}
+
+.stack__label {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section .tags {
+  display: contents;
+}
+
+.section .tags li {
+  margin: 0;
+  padding: 0.05rem 0.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  list-style: none;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  max-width: 54rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 640px) {
+  .toolbar {
+    margin-top: 1rem;
+  }
+
+  .page {
+    padding: 2rem 1.25rem;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+
+  .masthead h1 {
+    font-size: 1.8rem;
+  }
+
+  .section--technical-skills > ul > li {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .role__header,
+  .engagement__header {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+/* ---------- Print / PDF ---------- */
+
+@page {
+  size: letter;
+  margin: 0.55in 0.6in;
+}
+
+@media print {
+  :root {
+    --bg: #fff;
+    --surface: #fff;
+    --text: #111;
+    --muted: #444;
+    --rule: #ccc;
+    --accent: #1f4e79;
+    --accent-soft: #e8eff6;
+  }
+
+  body {
+    font-size: 9.6pt;
+    line-height: 1.4;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .toolbar,
+  .footer {
+    display: none;
+  }
+
+  .page {
+    max-width: none;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .masthead h1 {
+    font-size: 21pt;
+  }
+
+  /* Links stay clickable in the PDF; print the visible text, which is already the URL. */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Screen spacing is generous; print stays compact to fit two pages. */
+  .masthead {
+    padding-bottom: 0.8rem;
+  }
+
+  .headline {
+    margin: 0.3rem 0 0.6rem;
+  }
+
+  .section {
+    margin-top: 1.1rem;
+  }
+
+  .section > h2 {
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .section li + li {
+    margin-top: 0.2rem;
+  }
+
+  .section--technical-skills > ul {
+    gap: 0.2rem;
+  }
+
+  .section--technical-skills > ul > li {
+    grid-template-columns: 7.5rem 1fr;
+    gap: 0.5rem;
+  }
+
+  .engagement + .engagement {
+    margin-top: 0.8rem;
+  }
+
+  .role {
+    padding: 0.7rem 0;
+  }
+
+  .role__header,
+  .engagement__header {
+    margin-bottom: 0.35rem;
+  }
+
+  .engagement {
+    margin-top: 0.6rem;
+  }
+
+  li.stack {
+    margin-top: 0.35rem;
+  }
+
+  .role__header,
+  .engagement__header,
+  .section > h2 {
+    break-after: avoid;
+  }
+
+  .section li,
+  .engagement__header {
+    break-inside: avoid;
+  }
+
+  .section .tags li {
+    padding: 0 0.4rem;
+    font-size: 7.6pt;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <nav class="toolbar" aria-label="Résumé actions">
+      <button class="button" type="button" onclick="window.print()">Print / Save as PDF</button>
+    </nav>
+    <div class="page">
+<header class="masthead"><h1>Aemielvin C. Loremia</h1><p class="headline">Full-Stack Engineer · AI-Assisted Development &#x26; Agentic Workflows · TypeScript · React / Next.js · Node.js · PostgreSQL · AWS</p><ul class="contact"><li>Quezon City, Philippines</li><li>Open to remote (overlap with US / EU / AU hours)</li><li><a href="mailto:aemielvin.loremia@gmail.com">aemielvin.loremia@gmail.com</a></li><li><a href="https://linkedin.com/in/aemielvin-loremia-41717a140" rel="me">linkedin.com/in/aemielvin-loremia-41717a140</a></li><li><a href="https://github.com/erocrizs" rel="me">github.com/erocrizs</a></li></ul></header><main><section class="section section--summary" aria-labelledby="summary"><h2 id="summary">Summary</h2><p>Full-stack engineer with 9 years building production web applications in TypeScript, React/Next.js and Node.js on PostgreSQL and AWS. Most recently built LLM-powered data pipelines and AI-assisted internal tools in production, and work day to day with AI development tools and agentic workflows. Previously shipped payment and fintech systems (instant creator payouts, digital-bank transfer APIs) and SaaS booking and analytics platforms. Introduced CI/CD and test-driven development to past teams and led a small international contractor team. Experienced working remotely with US, EU and APAC teams in agile settings.</p></section><section class="section section--technical-skills" aria-labelledby="technical-skills"><h2 id="technical-skills">Technical Skills</h2><ul>
+<li><strong>Languages:</strong> TypeScript, JavaScript (ES2023+), SQL, Python, C#</li>
+<li><strong>Frontend:</strong> React, Next.js, Shopify Hydrogen, Angular, Vue, Tailwind CSS, Bootstrap, CSS Grid/Flexbox</li>
+<li><strong>Backend:</strong> Node.js, Express, REST, GraphQL (AWS AppSync), Flask, .NET 5, async job queues</li>
+<li><strong>Data:</strong> PostgreSQL, MySQL/MariaDB, MSSQL, DynamoDB, MongoDB, Supabase, Prisma, Drizzle ORM</li>
+<li><strong>Cloud &#x26; DevOps:</strong> AWS (EC2, ECS, Lambda, RDS, S3, Amplify, Cognito, IAM, CloudWatch), Vercel, Render, Jenkins, GitLab CI/CD, Travis CI, Git/GitHub/GitLab</li>
+<li><strong>Testing:</strong> Jest, test-driven development, React Testing Library</li>
+<li><strong>AI &#x26; Agentic Development:</strong> OpenAI API (LLM-based document extraction and data structuring), AI-assisted development tools, agentic workflows, LLM pipeline design with human-in-the-loop review</li>
+</ul></section><section class="section section--experience" aria-labelledby="experience"><h2 id="experience">Experience</h2><article class="role"><header class="role__header"><div class="header__main"><h3 class="role__heading"><span class="role__org">Fluency Global Inc.</span><span class="role__title">Full-Stack Developer (Consultant)</span></h3><p class="meta"><span>Remote</span><span>Placed with two client teams</span></p></div><p class="dates">Nov 2025 – Oct 2026</p></header><div class="engagement"><header class="engagement__header"><div class="header__main"><h4 class="engagement__name">Civic Calling Corporation</h4><p class="meta"><span>civic-data platform</span></p></div><p class="dates">Feb 2026 – Oct 2026</p></header><ul>
+<li>Built an LLM-powered ingestion pipeline (OpenAI API, Node.js async queue workers) that turns government employment documents from local-government websites into structured PostgreSQL data, processing ~1500 records per week.</li>
+<li>Shipped internal Next.js tools that let the non-engineering data team run, monitor and correct AI-assisted cleanup and import jobs themselves, replacing manual cleanups and cutting turnaround from 2-5 hours per jurisdiction down to 15 minutes.</li>
+<li>Adopted AI development tools and agentic workflows in daily engineering work to speed up design, implementation and iteration on the platform.</li>
+<li class="stack"><span class="stack__label">Stack</span><ul class="tags" aria-label="Tech stack"><li>Next.js</li><li>React</li><li>TypeScript</li><li>Node.js</li><li>Drizzle ORM</li><li>PostgreSQL</li><li>Supabase</li><li>Render</li><li>OpenAI API</li></ul></li>
+</ul></div><div class="engagement"><header class="engagement__header"><div class="header__main"><h4 class="engagement__name">Live it Up</h4><p class="meta"><span>e-commerce brand</span></p></div><p class="dates">Nov 2025 – Feb 2026</p></header><ul>
+<li>Migrated components from a legacy Shopify Liquid storefront into reusable React components for the new Shopify Hydrogen site.</li>
+<li>Built a limited-time campaign landing page and delivered UI updates requested by the design team, while maintaining the live Liquid store.</li>
+<li class="stack"><span class="stack__label">Stack</span><ul class="tags" aria-label="Tech stack"><li>Shopify Hydrogen</li><li>React</li><li>TypeScript</li><li>Node.js</li><li>Shopify Liquid</li></ul></li>
+</ul></div></article><article class="role"><header class="role__header"><div class="header__main"><h3 class="role__heading"><span class="role__org">Innovative Systems Group Global Inc.</span><span class="role__title">Full-Stack Developer (Consultant)</span></h3><p class="meta"><span>Remote</span><span>Placed with two client teams</span></p></div><p class="dates">Mar 2024 – Aug 2025</p></header><div class="engagement"><header class="engagement__header"><div class="header__main"><h4 class="engagement__name">Motorola Solutions</h4><p class="meta"><span>enterprise communications</span></p></div><p class="dates">Jun 2025 – Aug 2025</p></header><ul>
+<li>Wrote technical documentation for an internal systems-monitoring platform, covering architecture and operational runbooks for internal users.</li>
+</ul></div><div class="engagement"><header class="engagement__header"><div class="header__main"><h4 class="engagement__name">Goose.pet</h4><p class="meta"><span>pet-care booking SaaS</span></p></div><p class="dates">Mar 2024 – Jun 2025</p></header><ul>
+<li>Built metrics and reporting dashboards that let client businesses track bookings, revenue, and utilization across all their branch locations.</li>
+<li>Delivered the admin invite flow: email invitations with secure, single-use account-creation links for employee onboarding.</li>
+<li>Built admin configuration pages, including mandatory temperament tests per service offering.</li>
+<li>Redesigned complex booking cancellations to handle edge cases cleanly, reducing support tickets by 15%.</li>
+<li class="stack"><span class="stack__label">Stack</span><ul class="tags" aria-label="Tech stack"><li>TypeScript</li><li>React</li><li>Node.js</li><li>Prisma</li><li>PostgreSQL</li><li>AWS</li><li>REST</li><li>CI/CD</li></ul></li>
+</ul></div></article><article class="role"><header class="role__header"><div class="header__main"><h3 class="role__heading"><span class="role__org">Collabera Technologies (Philippines)</span><span class="role__title">API Developer (Contract)</span></h3><p class="meta"><span>Placed with UnionDigital Bank</span></p></div><p class="dates">Jul 2023 – Nov 2023</p></header><ul>
+<li>Built, maintained and supported backend services for payments and fund transfers in the UnionDigital Bank app.</li>
+<li class="stack"><span class="stack__label">Stack</span><ul class="tags" aria-label="Tech stack"><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>AWS</li><li>REST</li><li>CI/CD</li></ul></li>
+</ul></article><article class="role"><header class="role__header"><div class="header__main"><h3 class="role__heading"><span class="role__org">Magic, Inc.</span><span class="role__title">Software Engineer</span></h3><p class="meta"><span>Remote</span><span>global team</span></p></div><p class="dates">Sep 2021 – Jun 2023</p></header><ul>
+<li>Architected time-limited, encrypted credential sharing so US clients can grant virtual assistants temporary access to passwords and sensitive data using encryption at rest, expiring access, audit logs.</li>
+<li>Led 3 international contract developers on support and bug-fix work: triage, code review and task planning.</li>
+<li>Built a live dashboard for virtual assistants to track time and progress on client tasks.</li>
+<li>Redesigned assistant profiles into anonymous, shareable pages for client hiring decisions.</li>
+<li class="stack"><span class="stack__label">Stack</span><ul class="tags" aria-label="Tech stack"><li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li><li>PostgreSQL</li><li>Supabase</li><li>AWS</li><li>Vercel</li></ul></li>
+</ul></article><article class="role"><header class="role__header"><div class="header__main"><h3 class="role__heading"><span class="role__org">Staizen Pte. Ltd.</span><span class="role__title">Senior Backend Engineer</span></h3></div><p class="dates">Apr 2021 – Aug 2021</p></header><ul>
+<li>Built serverless backend features for a banking client's progressive web app (AWS AppSync, GraphQL, Lambda, MSSQL).</li>
+<li>Created a developer tool that automatically uploads, validates and loads CSV data into the database.</li>
+<li class="stack"><span class="stack__label">Stack</span><ul class="tags" aria-label="Tech stack"><li>Node.js</li><li>AWS AppSync</li><li>GraphQL</li><li>Lambda</li><li>MSSQL</li><li>C#</li><li>.NET 5</li></ul></li>
+</ul></article><article class="role"><header class="role__header"><div class="header__main"><h3 class="role__heading"><span class="role__org">MCN Freedom! Tech Inc.</span><span class="role__title">Software Development Engineer</span></h3></div><p class="dates">Jul 2017 – Mar 2021</p></header><ul>
+<li>Designed and launched <strong>Instant Payments</strong>, letting YouTube partners withdraw earnings on demand for a fee instead of waiting about two months. The fees became a new revenue stream, adding 20% on top of the company's existing revenue share from partners.</li>
+<li>Extended it into <strong>Weekly Payments</strong>, an automatic weekly payout option adopted by more than 50% of the partners.</li>
+<li>Built features for the earnings and payout system across PayPal, Tipalti and Wise for all partner creators.</li>
+<li>Set up a Jenkins CI/CD pipeline and introduced test-driven development, automating tests and deployments and reducing failed releases by 10%.</li>
+<li>Built creator tools: a React music library for browsing and downloading licensed tracks, and an Angular scheduler for publishing videos to YouTube, Dailymotion and Youku.</li>
+<li class="stack"><span class="stack__label">Stack</span><ul class="tags" aria-label="Tech stack"><li>Node.js</li><li>React</li><li>Angular</li><li>Flask</li><li>jQuery</li><li>MariaDB</li><li>AWS</li></ul></li>
+</ul></article></section><section class="section section--education" aria-labelledby="education"><h2 id="education">Education</h2><p><strong>BS Computer Science, Specialization in Interactive Multimedia</strong> — Ateneo de Manila University, 2017 · Cum Laude, Dean's List (6 semesters)</p></section><section class="section section--achievements-and-leadership" aria-labelledby="achievements-and-leadership"><h2 id="achievements-and-leadership">Achievements &#x26; Leadership</h2><ul>
+<li><strong>Competitive programming:</strong> 3rd-ranked Philippine team, ACM ICPC Manila Regionals 2016; Ateneo Programming Varsity, 2014–2017.</li>
+<li><strong>Hackathon:</strong> 3rd place, Freelancer Hackzilla Manila II (2017), face-recognition attendance app for Android.</li>
+<li><strong>Publications:</strong> Co-author of two IT literacy textbooks, <em>BITWISE</em> Grades 1–2 (The Bookmark Inc., 2015).</li>
+<li><strong>Communication:</strong> Club President, El Presidente Toastmasters Club (Toastmasters International), 2020.</li>
+</ul></section></main>
+    </div>
+    <footer class="footer">
+      <p>© 2026 Aemielvin C. Loremia · Generated from <a href="https://github.com/erocrizs/resume">resume.md</a></p>
+    </footer>
+
+  </body>
+</html>
