@@ -1,0 +1,447 @@
+:root {
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --text: #1c1f24;
+  --muted: #5b6370;
+  --rule: #dfe2e7;
+  --accent: #1f4e79;
+  --accent-soft: #e8eff6;
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius: 10px;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1216;
+    --surface: #171b21;
+    --text: #e6e8eb;
+    --muted: #9aa3ae;
+    --rule: #2a3039;
+    --accent: #8cb8e6;
+    --accent-soft: #1d2a38;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 1rem/1.65 var(--font);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Toolbar ---------- */
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  max-width: 54rem;
+  margin: 2rem auto 1rem;
+  padding: 0 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--surface);
+  font: 600 0.875rem/1.2 var(--font);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ---------- Page ---------- */
+
+.page {
+  max-width: 54rem;
+  margin: 0 auto;
+  padding: 3.5rem 4rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.masthead {
+  padding-bottom: 1.75rem;
+  border-bottom: 3px solid var(--accent);
+}
+
+.masthead h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.headline {
+  margin: 0.6rem 0 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contact li:not(:last-child)::after {
+  content: "·";
+  margin: 0 0.55rem;
+  color: var(--rule);
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  margin-top: 2.75rem;
+}
+
+.section > h2 {
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section p {
+  margin: 0 0 0.75rem;
+}
+
+.section ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.section li + li {
+  margin-top: 0.55rem;
+}
+
+.section--technical-skills > ul {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.section--technical-skills > ul > li {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 1rem;
+}
+
+.section--technical-skills li + li {
+  margin-top: 0;
+}
+
+/* ---------- Roles ---------- */
+
+.role {
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.role:first-of-type {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.role__header,
+.engagement__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.3rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.header__main {
+  min-width: 0;
+}
+
+.header__main .meta {
+  margin-top: 0.2rem;
+}
+
+.dates {
+  flex-shrink: 0;
+  margin: 0;
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.role__heading {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.role__title {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.meta span:not(:last-child)::after {
+  content: "·";
+  margin: 0 0.45rem;
+  color: var(--rule);
+}
+
+.engagement {
+  margin: 1.25rem 0 0;
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--accent-soft);
+}
+
+.engagement + .engagement {
+  margin-top: 2rem;
+}
+
+.engagement__header {
+  margin-bottom: 0.6rem;
+}
+
+.engagement__name {
+  margin: 0;
+  font-size: 0.975rem;
+}
+
+/* ---------- Stack tags ---------- */
+
+li.stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+  margin-left: -1.15rem;
+  list-style: none;
+}
+
+.stack__label {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section .tags {
+  display: contents;
+}
+
+.section .tags li {
+  margin: 0;
+  padding: 0.05rem 0.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  list-style: none;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  max-width: 54rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 640px) {
+  .toolbar {
+    margin-top: 1rem;
+  }
+
+  .page {
+    padding: 2rem 1.25rem;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+
+  .masthead h1 {
+    font-size: 1.8rem;
+  }
+
+  .section--technical-skills > ul > li {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .role__header,
+  .engagement__header {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+/* ---------- Print / PDF ---------- */
+
+@page {
+  size: letter;
+  margin: 0.55in 0.6in;
+}
+
+@media print {
+  :root {
+    --bg: #fff;
+    --surface: #fff;
+    --text: #111;
+    --muted: #444;
+    --rule: #ccc;
+    --accent: #1f4e79;
+    --accent-soft: #e8eff6;
+  }
+
+  body {
+    font-size: 9.6pt;
+    line-height: 1.4;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .toolbar,
+  .footer {
+    display: none;
+  }
+
+  .page {
+    max-width: none;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .masthead h1 {
+    font-size: 21pt;
+  }
+
+  /* Links stay clickable in the PDF; print the visible text, which is already the URL. */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Screen spacing is generous; print stays compact to fit two pages. */
+  .masthead {
+    padding-bottom: 0.8rem;
+  }
+
+  .headline {
+    margin: 0.3rem 0 0.6rem;
+  }
+
+  .section {
+    margin-top: 1.1rem;
+  }
+
+  .section > h2 {
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .section li + li {
+    margin-top: 0.2rem;
+  }
+
+  .section--technical-skills > ul {
+    gap: 0.2rem;
+  }
+
+  .section--technical-skills > ul > li {
+    grid-template-columns: 7.5rem 1fr;
+    gap: 0.5rem;
+  }
+
+  .engagement + .engagement {
+    margin-top: 0.8rem;
+  }
+
+  .role {
+    padding: 0.7rem 0;
+  }
+
+  .role__header,
+  .engagement__header {
+    margin-bottom: 0.35rem;
+  }
+
+  .engagement {
+    margin-top: 0.6rem;
+  }
+
+  li.stack {
+    margin-top: 0.35rem;
+  }
+
+  .role__header,
+  .engagement__header,
+  .section > h2 {
+    break-after: avoid;
+  }
+
+  .section li,
+  .engagement__header {
+    break-inside: avoid;
+  }
+
+  .section .tags li {
+    padding: 0 0.4rem;
+    font-size: 7.6pt;
+  }
+}
