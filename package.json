@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/erocrizs/resume/issues"
   },
-  "homepage": "https://erocrizs.github.io/resume/",
+  "homepage": "https://cv.aems.xyz/",
   "dependencies": {
     "hast-util-to-string": "^3.0.1",
     "hastscript": "^9.0.1",
