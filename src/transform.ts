@@ -51,7 +51,6 @@ function trimGroup(group: ElementContent[]): ElementContent[] {
   return out.filter((node) => node.type !== 'text' || node.value !== '');
 }
 
-/** Renders "a · b · c" as spans, marking date ranges with <span class="dates">. */
 /**
  * Builds a two-column header: the heading plus any non-date details on the
  * left, the date range on the right.

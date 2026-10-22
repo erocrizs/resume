@@ -39,6 +39,15 @@ const escapeHtml = (text: string): string =>
 const stripMarkdown = (text: string): string =>
   text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*_`]/g, '').trim();
 
+/** Trims text to a search-snippet length, preferring a sentence boundary, else a word boundary. */
+function truncate(text: string, max: number): string {
+  if (text.length <= max) return text;
+  const clipped = text.slice(0, max);
+  const sentence = clipped.match(/^.*[.!?](?=\s)/s)?.[0];
+  if (sentence && sentence.length >= max / 2) return sentence;
+  return `${clipped.slice(0, clipped.lastIndexOf(' ')).replace(/[,;:\s]+$/, '')}…`;
+}
+
 /** Pulls the facts used for <meta> tags and JSON-LD out of resume.md's header and summary. */
 function readProfile(markdown: string): Profile {
   const lines = markdown.split(/\r?\n/);
@@ -103,7 +112,7 @@ export async function build({ inject = '' }: BuildOptions = {}): Promise<void> {
   const values: Record<string, string> = {
     title: escapeHtml(`${profile.name} — ${profile.jobTitle}`),
     name: escapeHtml(profile.name),
-    description: escapeHtml(profile.summary),
+    description: escapeHtml(truncate(profile.summary, 160)),
     url: escapeHtml(url),
     year: String(new Date().getFullYear()),
     styles,
