@@ -1,12 +1,12 @@
 # Aemielvin C. Loremia
 
-**Full-Stack Engineer · TypeScript · React / Next.js · Node.js · PostgreSQL · AWS**
+**Full-Stack Engineer · AI-Assisted Development & Agentic Workflows · TypeScript · React / Next.js · Node.js · PostgreSQL · AWS**
 
 Quezon City, Philippines · Open to remote (overlap with US / EU / AU hours) · aemielvin.loremia@gmail.com · [linkedin.com/in/aemielvin-loremia-41717a140](https://linkedin.com/in/aemielvin-loremia-41717a140) · [github.com/erocrizs](https://github.com/erocrizs)
 
 ## Summary
 
-Full-stack engineer with 9 years building production web applications in TypeScript, React/Next.js and Node.js on PostgreSQL and AWS. Shipped payment and fintech systems (instant creator payouts, digital-bank transfer APIs), SaaS booking and analytics platforms, and LLM-powered data pipelines. Introduced CI/CD and test-driven development to past teams and led a small international contractor team. Experienced working remotely with US, EU and APAC teams in agile settings.
+Full-stack engineer with 9 years building production web applications in TypeScript, React/Next.js and Node.js on PostgreSQL and AWS. Most recently built LLM-powered data pipelines and AI-assisted internal tools in production, and work day to day with AI development tools and agentic workflows. Previously shipped payment and fintech systems (instant creator payouts, digital-bank transfer APIs) and SaaS booking and analytics platforms. Introduced CI/CD and test-driven development to past teams and led a small international contractor team. Experienced working remotely with US, EU and APAC teams in agile settings.
 
 ## Technical Skills
 
@@ -16,7 +16,7 @@ Full-stack engineer with 9 years building production web applications in TypeScr
 - **Data:** PostgreSQL, MySQL/MariaDB, MSSQL, DynamoDB, MongoDB, Supabase, Prisma, Drizzle ORM
 - **Cloud & DevOps:** AWS (EC2, ECS, Lambda, RDS, S3, Amplify, Cognito, IAM, CloudWatch), Vercel, Render, Jenkins, GitLab CI/CD, Travis CI, Git/GitHub/GitLab
 - **Testing:** Jest, test-driven development, React Testing Library
-- **AI:** OpenAI API (LLM-based document extraction and data structuring)
+- **AI & Agentic Development:** OpenAI API (LLM-based document extraction and data structuring), AI-assisted development tools, agentic workflows, LLM pipeline design with human-in-the-loop review
 
 ## Experience
 
@@ -26,8 +26,9 @@ Nov 2025 – Oct 2026 · Remote · Placed with two client teams
 
 **Civic Calling Corporation** — civic-data platform · Feb 2026 – Oct 2026
 
-- Built an LLM-assisted ingestion pipeline (OpenAI API, Node.js async queue workers) that turns government employment documents from local-government websites into structured PostgreSQL data, processing ~1500 records per week.
-- Shipped internal Next.js tools that let the data team run, monitor and correct cleanup and import jobs themselves with the assistance of OpenAI API, replacing manual cleanups and cutting turnaround from 2-5 hours per jurisdiction down to 15 minutes.
+- Built an LLM-powered ingestion pipeline (OpenAI API, Node.js async queue workers) that turns government employment documents from local-government websites into structured PostgreSQL data, processing ~1500 records per week.
+- Shipped internal Next.js tools that let the non-engineering data team run, monitor and correct AI-assisted cleanup and import jobs themselves, replacing manual cleanups and cutting turnaround from 2-5 hours per jurisdiction down to 15 minutes.
+- Adopted AI development tools and agentic workflows in daily engineering work to speed up design, implementation and iteration on the platform.
 - Stack: Next.js, React, TypeScript, Node.js, Drizzle ORM, PostgreSQL, Supabase, Render, OpenAI API.
 
 **Live it Up** — e-commerce brand · Nov 2025 – Feb 2026
