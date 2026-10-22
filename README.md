@@ -2,7 +2,7 @@
 
 Project for rendering Aemielvin Loremia's resume as a webpage.
 
-[`resume.md`](resume.md) is the single source of truth. A small TypeScript build turns it into a styled static page, deployed to GitHub Pages at <https://erocrizs.github.io/resume/>.
+[`resume.md`](resume.md) is the single source of truth. A small TypeScript build turns it into a styled static page, deployed to GitHub Pages at <https://cv.aems.xyz/>.
 
 ## Usage
 
